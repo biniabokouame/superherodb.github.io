@@ -1,0 +1,45 @@
+<app-header></app-header>
+<button class="btn btn-outline-primary" (click)="goBack()">Back</button>
+
+<div *ngIf="hero" class="hero-detail-container">
+    <h2>{{ hero.name }}</h2>
+    <img [src]="hero.images.lg" [alt]="hero.name" class="hero-detail-img" />
+  
+    <h3>📊 Stats</h3>
+  <ul>
+    <li>🧠 Intelligence: {{ hero.powerstats.intelligence }}</li>
+    <li>💪 Strength: {{ hero.powerstats.strength }}</li>
+    <li>⚡ Speed: {{ hero.powerstats.speed }}</li>
+    <li>🛡️ Durability: {{ hero.powerstats.durability }}</li>
+    <li>🔥 Power: {{ hero.powerstats.power }}</li>
+    <li>🥋 Combat: {{ hero.powerstats.combat }}</li>
+  </ul>
+
+  <h3>📖 Biography</h3>
+  <ul>
+    <li><b>Full Name:</b> {{ hero.biography.fullName}}</li>
+    <li><b>Alter Ego:</b> {{ hero.biography.alterEgos}}</li>
+    <li><b>Aliases:</b> {{ hero.biography.aliases}}</li>
+    <li><b>Place of Birth:</b> {{ hero.biography.placeOfBirth}}</li>
+    <li><b>First Appearance:</b> {{ hero.biography.firstAppearance }}</li>
+    <li><b>Publisher:</b> {{ hero.biography.publisher }}</li>
+    <li><b>Alignment:</b> {{ hero.biography.alignment }}</li>
+  </ul>
+
+  <h3>👤 Appearance</h3>
+  <ul>
+    <li><b>Gender:</b> {{ hero.appearance.gender }}</li>
+    <li><b>Race:</b> {{ hero.appearance.race }}</li>
+    <li><b>Height:</b> {{ hero.appearance.height[1] }}</li>
+    <li><b>Weight:</b> {{ hero.appearance.weight[1] }}</li>
+    <li><b>Eye Color:</b> {{ hero.appearance.eyeColor }}</li>
+    <li><b>Hair Color:</b> {{ hero.appearance.hairColor }}</li>
+  </ul>
+
+  <h3>🔗 Connections</h3>
+  <ul>
+    <li><b>Affiliation:</b> {{ hero.connections.groupAffiliation }}</li>
+    <li><b>Relatives:</b> {{ hero.connections.relatives }}</li>
+  </ul>
+</div>
+  

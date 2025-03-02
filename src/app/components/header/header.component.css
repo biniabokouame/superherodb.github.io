@@ -1,0 +1,12 @@
+.header-container {
+    text-align: center;
+}
+
+.header-title {
+    font-size: 4.5rem;
+}
+.incomplete-line {
+    border-bottom: 3px solid black;
+    width: 90%;
+    margin: 0 auto;
+}   

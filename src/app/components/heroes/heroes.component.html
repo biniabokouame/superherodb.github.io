@@ -1,0 +1,46 @@
+<app-header></app-header>
+<div class="search-container">
+    <input 
+      type="text" 
+      placeholder="Enter a name to search" 
+      (input)="onSearch($event)"
+    />
+</div>
+
+  
+<div class="hero-container">
+    <div *ngFor="let hero of filteredHeroes$ | async" (click)="goToHero(hero.id)" class="hero-card">
+        <img [src]="hero.images.md" [alt]="hero.name" class="hero-img" />
+        <div class="hero-info">
+            <h3>{{ hero.name }}</h3>
+            <div class="stats">
+                <div class="stat">
+                    <span>CBT</span>
+                    <div class="progress-bar"><div class="progress" [style.width.%]="hero.powerstats.combat"></div></div>
+                </div>
+                <div class="stat">
+                    <span>DUR</span>
+                    <div class="progress-bar"><div class="progress" [style.width.%]="hero.powerstats.durability"></div></div>
+                </div>
+                <div class="stat">
+                    <span>INT</span>
+                    <div class="progress-bar"><div class="progress" [style.width.%]="hero.powerstats.intelligence"></div></div>
+                </div>
+                <div class="stat">
+                    <span>POW</span>
+                    <div class="progress-bar"><div class="progress" [style.width.%]="hero.powerstats.power"></div></div>
+                </div>
+                <div class="stat">
+                    <span>SPD</span>
+                    <div class="progress-bar"><div class="progress" [style.width.%]="hero.powerstats.speed"></div></div>
+                </div>
+                <div class="stat">
+                    <span>STR</span>
+                    <div class="progress-bar"><div class="progress" [style.width.%]="hero.powerstats.strength"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+  
